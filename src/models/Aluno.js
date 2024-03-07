@@ -6,7 +6,7 @@ export default class Aluno extends Model {
   static init(sequelize) {
     super.init({
       nome: Sequelize.STRING,
-      sobreNome: Sequelize.STRING,
+      sobrenome: Sequelize.STRING,
       email: Sequelize.STRING,
       idade: Sequelize.INTEGER,
       peso: Sequelize.FLOAT,
