@@ -3,12 +3,13 @@ import userController from '../controllers/userController';
 import loginRequired from '../middlewares/loginRequired';
 
 const router = new Router();
+// Não deveria existir, está implementado apenas para o estudo do CRUD
+// router.get('/', loginRequired, userController.index); // Listar todos os usuarios
+// router.get('/:id', userController.show); // Listar um unico usuario
 
-router.post('/', userController.store);
-router.get('/', loginRequired, userController.index);
-router.get('/:id', userController.show);
-router.put('/:id', userController.update);
-router.delete('/:id', userController.delete);
+router.post('/', userController.store); // Criar um usuario
+router.put('/', loginRequired, userController.update); // Atualizar um usuario
+router.delete('/', loginRequired, userController.delete); // Apagar um usuario
 
 export default router;
 
