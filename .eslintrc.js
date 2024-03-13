@@ -28,5 +28,6 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-param-reassign': 'off',
     'object-curly-newline': 'off',
+    'camelcase': 'off',
   },
 };
